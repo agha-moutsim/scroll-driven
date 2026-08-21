@@ -21,8 +21,8 @@ function Navbar() {
         <b>SY</b>VERSE*
       </h3>
 
-      <div className="nav-links-pill">
-        {['Universe', 'Avatars', 'Economy'].map((link) => (
+        <div className="nav-links-pill">
+        {['Universe', 'Avatars', 'Economy', 'Marketplace'].map((link) => (
           <a key={link} href="#" className="nav-link">
             {link}
           </a>
