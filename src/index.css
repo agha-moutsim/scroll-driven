@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================================================
+   3D award-winning typography
+   ========================================================= */
+
+/* Metallic gradient face + layered drop-shadow depth.
+   drop-shadow respects the background-clip:text alpha, so the
+   depth shadows follow the glyph shape (reliable cross-browser). */
+.fill-3d {
+  background: linear-gradient(
+    176deg,
+    #ffffff 0%,
+    #f6f6f6 32%,
+    #d8d8d8 64%,
+    #9a9a9a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter:
+    drop-shadow(0 1px 0 rgba(0, 0, 0, 0.55))
+    drop-shadow(0 3px 1px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 7px 4px rgba(0, 0, 0, 0.42))
+    drop-shadow(0 14px 10px rgba(0, 0, 0, 0.40))
+    drop-shadow(0 26px 24px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 48px 55px rgba(0, 0, 0, 0.55));
+  will-change: transform, filter;
+}
+
+/* Strong floating depth for editorial body text */
+.shadow-3d {
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.45),
+    0 3px 3px rgba(0, 0, 0, 0.38),
+    0 8px 8px rgba(0, 0, 0, 0.32),
+    0 16px 18px rgba(0, 0, 0, 0.28),
+    0 28px 36px rgba(0, 0, 0, 0.5);
+  will-change: transform;
+}
+
+/* Soft ambient depth for labels / metadata */
+.shadow-3d-soft {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(0, 0, 0, 0.45);
+  will-change: transform;
+}
+
+/* Faint glass card for the index items */
+.card-3d {
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.015)
+  );
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 16px 30px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
